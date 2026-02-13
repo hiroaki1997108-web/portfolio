@@ -1,0 +1,54 @@
+@charset "utf-8";
+//変数設定
+$black: #1b1b1b;
+$white: #f7f7f7;
+$sub: #f6f1e6;
+
+//フォント読み込み
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Zen+Kaku+Gothic+Antique&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+
+@mixin in-wrap($wd: 100%, $pd: 1em) {
+  padding: 0 #{($pd * 1)};
+  width: calc(100% - #{($pd * 2)});
+}
+
+@mixin df-set($justify: center, $align: center, $direct: initial) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direct;
+}
+
+@mixin transitions($target: all, $sec: 0.5s) {
+  -webkit-transition: $target $sec;
+  -moz-transition: $target $sec;
+  -ms-transition: $target $sec;
+  transition: $target $sec;
+}
+
+@mixin posi-set($position: relative, $ind: 0) {
+  position: $position;
+  z-index: $ind;
+}
+
+@mixin bg-set(
+  $url: $main,
+  $repeat: no-repeat,
+  $size: contain,
+  $position: center
+) {
+  background: $url;
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+@mixin font-base($size: 16px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: "Noto Sans JP", sans-serif;
+  // font-family: "Zen Old Mincho", serif;
+  // font-family: "Zen Kaku Gothic New", sans-serif;
+  // font-family: "Sawarabi Mincho", serif;
+}
