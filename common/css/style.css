@@ -250,6 +250,35 @@ header {
   to {
     opacity: 1;
     transform: translateY(-42%) translateY(-10px); } }
+.mv-scroll {
+  position: absolute;
+  z-index: 1;
+  bottom: 6%;
+  right: 6%;
+  transform: rotate(90deg);
+  transform-origin: right; }
+  .mv-scroll .line {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 1.2px;
+    background: rgba(247, 247, 247, 0.4); }
+    .mv-scroll .line::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation: mvscroll 3s ease-in-out infinite;
+      background: #f7f7f7;
+      animation-fill-mode: forwards; }
+
+@keyframes mvscroll {
+  0% {
+    transform: translateX(-100px) scaleX(0.8); }
+  100% {
+    transform: translateX(100px) scaleX(1); } }
 .works-list {
   width: 100%;
   display: grid;
@@ -352,7 +381,7 @@ footer {
     padding: 1em 0 3em; }
   footer .mail {
     display: block;
-    padding: 1em;
+    padding: 0.8em;
     border: solid 2px #1b1b1b;
     max-width: 400px;
     width: calc(100% - 3em);
