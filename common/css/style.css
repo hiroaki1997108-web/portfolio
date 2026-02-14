@@ -37,11 +37,6 @@ button {
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 
-.item-hover {
-  font-size: 3rem;
-  font-weight: 500;
-  font-family: "Noto Sans JP", sans-serif; }
-
 .skill-flex .item .head {
   font-size: 1.5rem;
   font-weight: 600;
@@ -55,9 +50,7 @@ footer .heading {
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 footer .mail {
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: "Noto Sans JP", sans-serif; }
+  font-size: 1.25rem; }
 
 .copyright {
   font-size: 0.8rem; }
@@ -71,9 +64,6 @@ footer .mail {
 
   .title-h2 {
     font-size: 3rem; }
-
-  .item-hover {
-    font-size: 2rem; }
 
   .skill-flex .item .skill-list {
     font-weight: 800; }
@@ -286,28 +276,24 @@ header {
   gap: 5em 5%; }
   .works-list .works-img {
     display: block;
-    position: relative; }
-    .works-list .works-img img {
-      box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
-      border-radius: 10px;
-      transition: 0.2s; }
-    .works-list .works-img .item-hover {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
+    border-radius: 10px; }
+    .works-list .works-img::after {
+      content: "";
       position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-      width: fit-content;
-      margin: auto;
-      color: #f7f7f7;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
       opacity: 0;
-      visibility: hidden;
-      transition: 0.2s; }
+      transition: 0.3s;
+      border-radius: 10px; }
+    .works-list .works-img img {
+      transition: 0.3s; }
+    .works-list .works-img:hover::after {
+      opacity: 1; }
     .works-list .works-img:hover img {
-      filter: brightness(0.6); }
-    .works-list .works-img:hover .item-hover {
-      opacity: 1;
-      visibility: visible; }
+      transform: scale(1.03); }
   .works-list .info {
     text-align: left;
     color: #7f7f7f;
@@ -383,13 +369,12 @@ footer {
     display: block;
     padding: 0.8em;
     border: solid 2px #1b1b1b;
-    max-width: 400px;
+    max-width: 360px;
     width: calc(100% - 3em);
     margin: 1em auto 0;
     border-radius: 2em;
     letter-spacing: 1px;
-    transition: 0.3s;
-    box-shadow: 0 2px 0 0 #1b1b1b; }
+    transition: 0.3s; }
     footer .mail:hover {
       background: #fff; }
 
