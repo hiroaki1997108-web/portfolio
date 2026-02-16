@@ -60,56 +60,43 @@
           <h2 class="title-h2">WORKS</h2>
           <div class="works-list">
             <div class="item">
-              <a href="" class="works-img">
+              <div class="works-img" data-slide="0">
                 <img src="common/images/dummy-hp.png" alt="" />
-              </a>
-              <p class="info">Website<br /></p>
+              </div>
+              <div class="kind">Website<br /></div>
             </div>
+
             <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-hp.png" alt="" />
-              </a>
-              <p class="info">Website<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-hp.png" alt="" />
-              </a>
-              <p class="info">Website<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-hp.png" alt="" />
-              </a>
-              <p class="info">Website<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
+              <div class="works-img" data-slide="1">
                 <img src="common/images/dummy-bnr.png" alt="" />
-              </a>
-              <p class="info">Banner<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-bnr.png" alt="" />
-              </a>
-              <p class="info">Banner<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-bnr.png" alt="" />
-              </a>
-              <p class="info">Banner<br /></p>
-            </div>
-            <div class="item">
-              <a href="" class="works-img">
-                <img src="common/images/dummy-bnr.png" alt="" />
-              </a>
-              <p class="info">Banner<br /></p>
+              </div>
+              <div class="kind">Banner<br /></div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Works Modal -->
+      <div class="works-modal" id="worksModal">
+        <div class="modal-close">×</div>
+        <div class="swiper worksSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>Website</div>
+              <img src="common/images/dummy-hp.png" alt="" />
+              <p>制作背景や担当範囲、使用技術などを記載します。</p>
+            </div>
+            <div class="swiper-slide">
+              <div>Banner</div>
+              <img src="common/images/dummy-bnr.png" alt="" />
+              <p>バナー作品の詳細説明を記載します。</p>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
 
       <section id="skill">
         <div class="inner-wrap">
@@ -175,5 +162,23 @@
         <div class="copyright">&copy;Hiroaki Mori</div>
       </div>
     </footer>
+
+    <script>
+      const worksSwiper = new Swiper(".worksSwiper", {
+        loop: false,
+        speed: 500,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

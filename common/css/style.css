@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: clamp(0.875rem, 0.8rem + 0.27vw, 1rem); }
+  font-size: clamp(14px, 1.6vw, 16px); }
 
 input,
 button {
@@ -14,6 +14,12 @@ button {
 
 .title-h1 {
   font-size: 2rem;
+  font-weight: 800;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Zen Old Mincho", serif; }
+
+.title-h2 {
+  font-size: 4rem;
   font-weight: 800;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
@@ -31,11 +37,8 @@ button {
   .mv-title span {
     font-size: 0.9rem; }
 
-.title-h2 {
-  font-size: 4rem;
-  font-weight: 800;
-  font-family: "Noto Sans JP", sans-serif;
-  font-family: "Zen Old Mincho", serif; }
+.modal-close {
+  font-size: 1.8rem; }
 
 .skill-flex .item .head {
   font-size: 1.5rem;
@@ -75,7 +78,7 @@ body {
   width: 100%;
   overflow-x: clip;
   color: #1b1b1b;
-  background-color: #fffbf3; }
+  background: #fffbf3; }
 
 img {
   width: 100%;
@@ -279,7 +282,8 @@ header {
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
-    border-radius: 10px; }
+    border-radius: 10px;
+    cursor: pointer; }
     .works-list .works-img::after {
       content: "";
       position: absolute;
@@ -294,10 +298,60 @@ header {
       opacity: 1; }
     .works-list .works-img:hover img {
       transform: scale(1.03); }
-  .works-list .info {
+  .works-list .kind {
     text-align: left;
     color: #7f7f7f;
     padding: 12px 0 0; }
+
+.works-modal {
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .works-modal.active {
+    opacity: 1;
+    visibility: visible; }
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  cursor: pointer;
+  color: #f7f7f7; }
+
+.worksSwiper {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  height: 85vh;
+  z-index: 2; }
+  .worksSwiper .swiper-slide {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2em;
+    border-radius: 20px;
+    background: #f7f7f7;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none; }
+    .worksSwiper .swiper-slide::-webkit-scrollbar {
+      display: none; }
+  .worksSwiper img {
+    width: 100%;
+    margin: 1.5em auto;
+    border-radius: 10px; }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; }
 
 #skill {
   background: #f6f1e6; }

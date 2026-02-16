@@ -40,3 +40,49 @@ $(function () {
     $(".nav-menu-bg").removeClass("active");
   });
 });
+
+const modal = document.getElementById("worksModal");
+const overlay = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".modal-close");
+const worksItems = document.querySelectorAll(".works-img");
+
+let scrollPosition = 0;
+if (modal && worksItems.length) {
+  worksItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      scrollPosition = window.scrollY;
+
+      modal.classList.add("active");
+
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+
+      const slideIndex = Number(item.dataset.slide);
+      worksSwiper.slideTo(slideIndex, 0);
+    });
+  });
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+
+  // 固定解除
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+
+  // 元の位置に戻す
+  window.scrollTo(0, scrollPosition);
+}
+// overlay.addEventListener("click", closeModal);
+if (closeBtn) {
+  closeBtn.addEventListener("click", closeModal);
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
