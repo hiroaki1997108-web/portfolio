@@ -1,20 +1,20 @@
 //anchorスクロール
-$(function () {
-  $('a[href^="#"]').click(function () {
-    var speed = 400;
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? "html" : href);
-    var position = target.offset().top - 60;
-    $("body,html").animate(
-      {
-        scrollTop: position,
-      },
-      speed,
-      "swing",
-    );
-    return false;
-  });
-});
+// $(function () {
+//   $('a[href^="#"]').click(function () {
+//     var speed = 400;
+//     var href = $(this).attr("href");
+//     var target = $(href == "#" || href == "" ? "html" : href);
+//     var position = target.offset().top - 60;
+//     $("body,html").animate(
+//       {
+//         scrollTop: position,
+//       },
+//       speed,
+//       "swing",
+//     );
+//     return false;
+//   });
+// });
 
 //スクロールでヘッダーの背景
 $(window).scroll(function () {
@@ -55,6 +55,9 @@ $(function () {
 
 $(function () {
   $(".nav-links a").click(function () {
+    const targetHref = $(this).attr("href");
+    const fixedTop = document.body.style.top;
+    const currentScroll = fixedTop ? -parseInt(fixedTop, 10) : window.scrollY;
     $(".nav-btn").removeClass("active");
     $(".nav-menu").removeClass("active");
     $(".nav-menu-bg").removeClass("active");
@@ -63,7 +66,24 @@ $(function () {
     document.body.style.top = "";
     document.body.style.left = "";
     document.body.style.right = "";
-    window.scrollTo(0, navScrollPosition);
+    // 元のスクロール位置へ即時復元（ここが重要）
+    window.scrollTo(0, currentScroll);
+
+    if (targetHref && targetHref.startsWith("#")) {
+      const target = $(targetHref);
+      if (target.length) {
+        const position = target.offset().top - 60;
+        $("html, body").animate(
+          {
+            scrollTop: position,
+          },
+          400,
+          "swing",
+        );
+      }
+    }
+
+    return false;
   });
 });
 
