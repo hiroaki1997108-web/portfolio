@@ -481,8 +481,8 @@ footer {
     flex-direction: column; }
     .nav-links li {
       opacity: 0;
-      transform: translateX(20px);
-      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
+      transform: translateX(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease; }
       .nav-links li a {
         display: inline-block;
         margin: 1.5em 0; }
