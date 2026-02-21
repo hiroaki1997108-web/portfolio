@@ -533,6 +533,10 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     gap: 4em 0;
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
   .skill-flex {
     flex-direction: column;
     .item {
