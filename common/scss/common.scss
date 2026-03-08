@@ -39,6 +39,15 @@ section {
   margin: 0 auto 0.8em;
   color: $black;
   text-shadow: 2px 2px 2px rgba(175, 156, 117, 0.7);
+  &::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 0.55em;
+    margin: 0.2em auto;
+    background: $black;
+    box-shadow: 1px 1px 2px 0px rgba(175, 156, 117, 0.7);
+  }
 }
 
 header {
@@ -178,7 +187,7 @@ header {
   letter-spacing: 8px;
   text-shadow: 1px 1px 12px rgba($black, 1);
   transform: translateY(-42%);
-  animation: mvfade 1.2s ease forwards;
+  animation: mvfade 2s ease forwards;
   span {
     display: block;
     letter-spacing: 3px;
@@ -309,7 +318,7 @@ header {
   right: 20px;
   cursor: pointer;
   color: $white;
-  background: $black;
+  background: rgba($black, 1);
   width: 60px;
   height: 60px;
   display: flex;
@@ -342,14 +351,15 @@ header {
     margin: 1.5em auto;
     border-radius: 10px;
   }
-}
-.swiper-button-next,
-.swiper-button-prev,
-.swiper-pagination {
-  position: fixed !important;
-}
-.swiper-pagination {
-  color: #fff;
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination {
+    position: fixed !important;
+  }
+  .swiper-pagination {
+    color: #fff;
+    bottom: 2%;
+  }
 }
 // skill----------------------------
 #skill {
@@ -429,9 +439,18 @@ footer {
   .heading {
     color: #1b1b1b;
     text-shadow: 2px 2px 2px rgba(175, 156, 117, 0.7);
+    &::after {
+      content: "";
+      display: block;
+      width: 1.5px;
+      height: 0.6em;
+      margin: 0.2em auto;
+      background: $black;
+      box-shadow: 1px 1px 2px 0px rgba(175, 156, 117, 0.7);
+    }
   }
   .contact-text {
-    padding: 1em 0 3em;
+    padding: 0.5em 0 3em;
   }
   .mail {
     display: block;
