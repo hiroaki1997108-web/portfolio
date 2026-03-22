@@ -66,7 +66,7 @@ $(function () {
     document.body.style.top = "";
     document.body.style.left = "";
     document.body.style.right = "";
-    // 元のスクロール位置へ即時復元（ここが重要）
+
     window.scrollTo(0, currentScroll);
 
     if (targetHref && targetHref.startsWith("#")) {

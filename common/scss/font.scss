@@ -4,27 +4,22 @@ body {
   @include font-base();
   font-size: unquote("clamp(14px, 1.6vw, 16px)");
 }
-
 input,
 button {
   @include font-base();
 }
-
 .title-h1 {
   @include font-base(2rem, 800);
   font-family: "Zen Old Mincho", serif;
 }
-
 .title-h2 {
   @include font-base(4rem, 800);
   font-family: "Zen Old Mincho", serif;
 }
-
 .nav-links {
   @include font-base(1.25rem, 800);
   font-family: "Zen Old Mincho", serif;
 }
-
 .mv-title {
   font-size: unquote("clamp(2.4rem, 6vw, 4rem);");
   font-weight: 800;
@@ -33,11 +28,9 @@ button {
     font-size: 0.9rem;
   }
 }
-
 .modal-close {
   font-size: 1.8rem;
 }
-
 .skill-flex {
   .item {
     .head {
@@ -48,7 +41,6 @@ button {
     }
   }
 }
-
 footer {
   .heading {
     @include font-base(2rem, 800);
@@ -58,7 +50,6 @@ footer {
     font-size: 1.25rem;
   }
 }
-
 .copyright {
   font-size: 0.8rem;
 }
@@ -74,7 +65,10 @@ footer {
     font-size: 1.5rem;
   }
   .title-h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
+  }
+  .modal-close {
+    font-size: 1.5rem;
   }
   .skill-flex {
     .item {

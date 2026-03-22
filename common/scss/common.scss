@@ -339,12 +339,15 @@ header {
     padding: 2em;
     border-radius: 20px;
     background: $white;
+  }
+  .slide-wrap {
+    height: 100%;
     overflow-y: auto;
-    &::-webkit-scrollbar {
-      display: none; //Chrome, Safari
-    }
-    scrollbar-width: none; //Firefox
-    -ms-overflow-style: none; //IE, Edge
+    // &::-webkit-scrollbar {
+    //   display: none; //Chrome, Safari
+    // }
+    // scrollbar-width: none; //Firefox
+    // -ms-overflow-style: none; //IE, Edge
   }
   img {
     width: 100%;
@@ -412,6 +415,7 @@ header {
   box-shadow: 0px 4px 16px 0 rgba($black, 0.12);
 }
 .about-img {
+  max-width: 360px;
   width: 35%;
   img {
     aspect-ratio: 1/1;
@@ -514,10 +518,10 @@ footer {
           transition-delay: 0.3s;
         }
         &:nth-child(3) {
-          transition-delay: 0.35s;
+          transition-delay: 0.375s;
         }
         &:nth-child(4) {
-          transition-delay: 0.4s;
+          transition-delay: 0.425s;
         }
       }
     }
@@ -630,6 +634,8 @@ footer {
   .modal-close {
     top: 10px;
     right: 10px;
+    width: 40px;
+    height: 40px;
   }
   footer {
     padding: 40px 0 30px;
