@@ -18,7 +18,7 @@
 
 //スクロールでヘッダーの背景
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 20) {
+  if ($(this).scrollTop() > 0) {
     $("header").addClass("active");
   } else {
     $("header").removeClass("active");
