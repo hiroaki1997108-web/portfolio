@@ -236,7 +236,7 @@ header {
   color: #f7f7f7;
   text-align: center;
   letter-spacing: 8px;
-  text-shadow: 1px 1px 12px #1b1b1b;
+  text-shadow: 1px 1px 12px rgba(27, 27, 27, 0.8);
   transform: translateY(-42%);
   animation: mvfade 2s ease forwards; }
   .mv-title span {
