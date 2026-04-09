@@ -40,6 +40,11 @@ button {
 .modal-close {
   font-size: 1.8rem; }
 
+.works-list .kinds {
+  font-size: 0.9em;
+  font-weight: 400;
+  font-family: "Noto Sans JP", sans-serif; }
+
 .skill-flex .item .head {
   font-size: 1.5rem;
   font-weight: 600;
@@ -221,7 +226,7 @@ header {
   object-fit: cover;
   margin: auto;
   border-radius: 20px;
-  filter: brightness(0.9); }
+  filter: brightness(0.8); }
 
 .mv-title {
   width: 100%;
@@ -309,10 +314,13 @@ header {
       opacity: 1; }
     .works-list .works-img:hover img {
       transform: scale(1.03); }
-  .works-list .kind {
-    text-align: left;
+  .works-list .kinds {
     color: #7f7f7f;
-    padding: 12px 0 0; }
+    padding: 0.1em 0.75em;
+    width: fit-content;
+    margin-top: 1.25em;
+    border: solid 1px #7f7f7f;
+    border-radius: 1em; }
 
 .works-modal {
   position: fixed;

@@ -175,7 +175,7 @@ header {
   object-fit: cover;
   margin: auto;
   border-radius: 20px;
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 }
 .mv-title {
   width: 100%;
@@ -285,10 +285,16 @@ header {
       }
     }
   }
-  .kind {
-    text-align: left;
+  .kinds {
+    // text-align: left;
+    // color: #7f7f7f;
+    // padding: 12px 0 0;
     color: #7f7f7f;
-    padding: 12px 0 0;
+    padding: 0.1em 0.75em;
+    width: fit-content;
+    margin-top: 1.25em;
+    border: solid 1px #7f7f7f;
+    border-radius: 1em;
   }
 }
 

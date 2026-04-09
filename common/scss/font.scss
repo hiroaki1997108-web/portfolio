@@ -31,6 +31,11 @@ button {
 .modal-close {
   font-size: 1.8rem;
 }
+.works-list {
+  .kinds {
+    @include font-base(0.9em, 400);
+  }
+}
 .skill-flex {
   .item {
     .head {
