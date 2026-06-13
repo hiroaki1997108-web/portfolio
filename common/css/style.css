@@ -110,6 +110,17 @@ section {
   max-width: 1200px;
   margin: auto; }
 
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateY(50%); }
+
+.fadeUp {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); }
+
 .title-h1 a {
   color: #1b1b1b; }
 
@@ -264,9 +275,11 @@ header {
       box-shadow: 0 0 6px 0 rgba(27, 27, 27, 0.8); }
 
 @keyframes mvfade {
-  from {
+  0% {
     opacity: 0; }
-  to {
+  20% {
+    opacity: 0; }
+  100% {
     opacity: 1;
     transform: translateY(-42%) translateY(-10px); } }
 .mv-scroll {

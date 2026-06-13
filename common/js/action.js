@@ -1,20 +1,20 @@
-//anchorスクロール
-// $(function () {
-//   $('a[href^="#"]').click(function () {
-//     var speed = 400;
-//     var href = $(this).attr("href");
-//     var target = $(href == "#" || href == "" ? "html" : href);
-//     var position = target.offset().top - 60;
-//     $("body,html").animate(
-//       {
-//         scrollTop: position,
-//       },
-//       speed,
-//       "swing",
-//     );
-//     return false;
-//   });
-// });
+//スクロールでフェードイン
+function fadeAnime() {
+  $(".fade").each(function () {
+    var elemPos = $(this).offset().top - 50;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+      $(this).addClass("fadeUp");
+    }
+    // else {
+    //   $(this).removeClass("fadeUp");
+    // }
+  });
+}
+$(window).on("scroll load", function () {
+  fadeAnime();
+});
 
 //スクロールでヘッダーの背景
 $(window).scroll(function () {

@@ -27,6 +27,19 @@ section {
   margin: auto;
 }
 
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  transform: translateY(50%);
+}
+
+.fadeUp {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .title-h1 {
   a {
     color: $black;
@@ -215,10 +228,13 @@ header {
   }
 }
 @keyframes mvfade {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  20% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
     transform: translateY(-42%) translateY(-10px);
   }
