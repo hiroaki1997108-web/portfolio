@@ -10,23 +10,19 @@ button {
 }
 .title-h1 {
   @include font-base(2rem, 800);
-  font-family: "Zen Old Mincho", serif;
 }
 .title-h2 {
   @include font-base(4.25rem, 800);
-  font-family: "Zen Old Mincho", serif;
 }
 .h2-sub {
   font-size: 0.25em;
 }
 .nav-links {
   @include font-base(1.25rem, 800);
-  font-family: "Zen Old Mincho", serif;
 }
 .mv-title {
   font-size: unquote("clamp(2.4rem, 6vw, 4rem);");
   font-weight: 800;
-  font-family: "Zen Old Mincho", serif;
   span {
     font-size: 0.9rem;
   }
@@ -42,17 +38,16 @@ button {
 .skill-flex {
   .item {
     .head {
-      @include font-base(1.5rem, 600);
+      @include font-base(1.5rem, 800);
     }
     .skill-list {
-      font-weight: 500;
+      font-weight: 800;
     }
   }
 }
 footer {
   .heading {
     @include font-base(3.5rem, 800);
-    font-family: "Zen Old Mincho", serif;
   }
   .mail {
     font-size: 1.25rem;

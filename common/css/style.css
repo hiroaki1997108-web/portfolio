@@ -1,27 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Zen+Kaku+Gothic+Antique&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
 body {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Zen Old Mincho", serif;
   font-size: clamp(14px, 1.6vw, 16px); }
 
 input,
 button {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Noto Sans JP", sans-serif; }
+  font-family: "Zen Old Mincho", serif; }
 
 .title-h1 {
   font-size: 2rem;
   font-weight: 800;
-  font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 
 .title-h2 {
   font-size: 4.25rem;
   font-weight: 800;
-  font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 
 .h2-sub {
@@ -30,13 +27,11 @@ button {
 .nav-links {
   font-size: 1.25rem;
   font-weight: 800;
-  font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 
 .mv-title {
   font-size: clamp(2.4rem, 6vw, 4rem);;
-  font-weight: 800;
-  font-family: "Zen Old Mincho", serif; }
+  font-weight: 800; }
   .mv-title span {
     font-size: 0.9rem; }
 
@@ -46,19 +41,18 @@ button {
 .works-list .kinds {
   font-size: 0.9em;
   font-weight: 400;
-  font-family: "Noto Sans JP", sans-serif; }
+  font-family: "Zen Old Mincho", serif; }
 
 .skill-flex .item .head {
   font-size: 1.5rem;
-  font-weight: 600;
-  font-family: "Noto Sans JP", sans-serif; }
+  font-weight: 800;
+  font-family: "Zen Old Mincho", serif; }
 .skill-flex .item .skill-list {
-  font-weight: 500; }
+  font-weight: 800; }
 
 footer .heading {
   font-size: 3.5rem;
   font-weight: 800;
-  font-family: "Noto Sans JP", sans-serif;
   font-family: "Zen Old Mincho", serif; }
 footer .mail {
   font-size: 1.25rem; }
@@ -129,7 +123,7 @@ section {
   text-align: center;
   margin: 0 auto 0.6em;
   color: #1b1b1b;
-  line-height: 1.3; }
+  line-height: 1.2; }
   .title-h2::after {
     content: "";
     display: block;
@@ -339,7 +333,7 @@ header {
       transform: scale(1.03); }
   .works-list .kinds {
     color: #7f7f7f;
-    padding: 0.1em 0.75em;
+    padding: 0.1em 0.75em 0.2em;
     width: fit-content;
     margin-top: 1.25em;
     border: solid 1px #7f7f7f;
@@ -396,7 +390,11 @@ header {
     background: #f7f7f7; }
   .worksSwiper .slide-wrap {
     height: 100%;
-    overflow-y: auto; }
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none; }
+    .worksSwiper .slide-wrap::-webkit-scrollbar {
+      display: none; }
   .worksSwiper img {
     width: 100%;
     margin: 1.5em auto;
