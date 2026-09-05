@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ポートフォリオ</title>
+
+    <link rel="stylesheet" href="common/css/reset.css" />
+    <link rel="stylesheet" href="common/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="common/js/action.js" defer></script>
+  </head>
+
+  <body ontouchstart="">
+    <header>
+      <div class="header-wrap">
+        <h1 class="title-h1"><a href="#">HIROAKI MORI</a></h1>
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#works">works</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-menu-bg"></div>
+        <div class="nav-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mv">
+      <div class="mv-wrap">
+        <img src="common/images/mv.webp" alt="イメージ" class="mv-img" />
+        <div class="mv-title">
+          PORTFOLIO<br />
+          <span>モリヒロアキの<br />ポートフォリオ</span>
+        </div>
+        <div class="mv-scroll">
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section id="works">
+        <div class="inner-wrap">
+          <h2 class="title-h2">Works<span class="h2-sub">作品一覧</span></h2>
+          <div class="works-list">
+            <div class="item fade">
+              <div class="works-img" data-slide="0">
+                <img src="common/images/dummy-hp.png" alt="" />
+              </div>
+              <div class="kinds">Website<br /></div>
+            </div>
+
+            <div class="item fade">
+              <div class="works-img" data-slide="1">
+                <img src="common/images/dummy-bnr.png" alt="" />
+              </div>
+              <div class="kinds">Banner<br /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works Modal -->
+      <div class="works-modal" id="worksModal">
+        <div class="modal-close">×</div>
+        <div class="swiper worksSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-wrap">
+                <div>Website</div>
+                <img src="common/images/dummy-hp.png" alt="" />
+                <p>制作背景や担当範囲、使用技術などを記載します。</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-wrap">
+                <div>Banner</div>
+                <img src="common/images/dummy-bnr.png" alt="" />
+                <p>バナー作品の詳細説明を記載します。</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <section id="skill">
+        <div class="inner-wrap">
+          <h2 class="title-h2">Skill<span class="h2-sub">スキル</span></h2>
+          <div class="skill-flex">
+            <div class="item fade">
+              <div class="head">Design</div>
+              <div class="skill-list">
+                Adobe Illustrator / Adobe Photoshop / Adobe XD / Figma
+              </div>
+              <p>
+                画像の修正から、バナー制作やLP、Webサイトの簡単なUIデザインが可能です。
+              </p>
+            </div>
+            <div class="item fade">
+              <div class="head">Coding</div>
+              <div class="skill-list">
+                HTML / CSS ( SCSS ) / JavaScript ( jquery ) / PHP / WordPress
+              </div>
+              <p>
+                レスポンシブ対応を含めたコーディングが可能です。
+                WordPressを使用したサイト構築にも対応できます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="inner-wrap">
+          <h2 class="title-h2">About<span class="h2-sub">私について</span></h2>
+          <div class="about-wrap fade">
+            <div class="about-img">
+              <img src="common/images/about.jpeg" alt="" />
+            </div>
+            <div class="about-text">
+              <p>森 裕章（もり ひろあき）</p>
+              <p>愛知県出身、1997年生まれです。</p>
+              <p>
+                メリハリと集中力を大切に、制作に取り組んでいます。<br />
+                サイト制作では、見た目だけでなくユーザーにとって
+                「使いやすさ」や「分かりやすさ」を意識した
+                デザインとコーディングをしています。<br />
+                今後も新しい知識やスキルの習得に努め、制作の質の向上に取り組んでまいります。
+              </p>
+              <p></p>
+              <p>
+                MBTI：INTP<br />
+                好きなもの：サッカー観戦・ゲーム、Netflix、アニメ、コーヒー、パン
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner-wrap">
+        <div id="contact">
+          <h3 class="heading">
+            Contact<span class="h2-sub">お問い合わせ</span>
+          </h3>
+          <div class="contact-text">
+            <p>お問い合わせは下記メール宛にお願いいたします。</p>
+            <a class="mail" href="mailto:hiroaki3957@icloud.com">
+              hiroaki3957@icloud.com
+            </a>
+          </div>
+        </div>
+        <div class="copyright">&copy;Hiroaki Mori</div>
+      </div>
+    </footer>
+
+    <script>
+      const worksSwiper = new Swiper(".worksSwiper", {
+        loop: false,
+        speed: 500,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          type: "fraction",
+        },
+      });
+    </script>
+  </body>
+</html>
