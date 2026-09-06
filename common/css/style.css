@@ -461,9 +461,12 @@ header {
   text-align: left;
   line-height: 1.8; }
   .about-text p {
-    margin-bottom: 0.8em; }
+    padding-bottom: 0.8em; }
     .about-text p:last-of-type {
       margin-bottom: 0; }
+  .about-text .text-bottom {
+    border-top: dotted 2px #1b1b1b;
+    padding-top: 0.8em; }
 
 footer {
   padding: 60px 0 30px;
