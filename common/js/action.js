@@ -1,7 +1,7 @@
 //スクロールでフェードイン
 function fadeAnime() {
   $(".fade").each(function () {
-    var elemPos = $(this).offset().top + 50;
+    var elemPos = $(this).offset().top;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
