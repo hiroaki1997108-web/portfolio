@@ -625,19 +625,6 @@ footer {
   .mv {
     padding-top: 80px; }
 
-  .mv-wrap::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 99;
-    background: linear-gradient(0deg, #fffbf3 0%, rgba(0, 0, 0, 0) 100%); }
-
   .mv-img {
     width: 100%;
     border-radius: 0; }
